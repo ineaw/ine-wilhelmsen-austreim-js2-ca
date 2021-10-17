@@ -12,7 +12,7 @@ export default function deleteButton(id) {
   button.onclick = async function () {
     console.log(id);
 
-    const doDelete = confirm("Are you sure you want to delete this article?");
+    const doDelete = confirm("Are you sure you want to delete this book?");
 
     if (doDelete) {
       const url = baseUrl + "articles/" + id;

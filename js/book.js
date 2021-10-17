@@ -1,5 +1,6 @@
 import { baseUrl } from "./settings/api.js";
 import createMenu from "./components/createMenu.js";
+import displayMessage from "./components/displayMessage.js";
 
 createMenu();
 
@@ -22,7 +23,7 @@ const bookUrl = baseUrl + "articles/" + id;
 
     document.title = details.title;
 
-    const bookContainer = document.querySelector(".detail-container");
+    const bookContainer = document.querySelector(".book-container");
 
     bookContainer.innerHTML = `
     <div class="detail">

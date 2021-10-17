@@ -5,7 +5,7 @@ export default function logoutButton() {
 
   if (button) {
     button.onclick = function () {
-      const doLogout = confirm("Are you sure?");
+      const doLogout = confirm("Are you sure you want to log out?");
 
       if (doLogout) {
         clearStorage();

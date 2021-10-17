@@ -32,8 +32,8 @@ export function renderBooks(booksToRender) {
 
   const favButtons = document.querySelectorAll(".book i");
 
-  favButtons.forEach((iButton) => {
-    iButton.addEventListener("click", handleClick);
+  favButtons.forEach((iconButton) => {
+    iconButton.addEventListener("click", handleClick);
   });
 
   function handleClick() {

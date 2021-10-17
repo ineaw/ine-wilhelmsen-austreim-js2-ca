@@ -16,7 +16,7 @@ export default function createMenu() {
      `;
   }
 
-  container.innerHTML = `<div class="menu">
+  container.innerHTML = `<div class="nav-menu">
                               <a href="/" class="${pathname === "/" || pathname === "/index.html" ? "active" : ""}">Home</a>
                               <a href="/favourites.html" class="${pathname === "/favourites.html" ? "active" : ""}">Favourites</a>
                               ${authLink}

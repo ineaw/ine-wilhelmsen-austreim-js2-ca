@@ -3,17 +3,20 @@
 }
 
 :root {
-  --warn: #4a2c40;
+  --error: #ed0800;
+  --warn: #610300;
   --accent: #d8f54e;
   --text: #223322;
   --main: #a3baec;
   --success: #5daa68;
+  --white: #fff;
+  --back: #f5f5f5;
 }
 
 body {
   height: 100vh;
-  font-family: "roboto mono";
-  background: white;
+  font-family: "roboto mono", sans-serif;
+  background: var(--back);
   color: var(--text);
   text-align: center;
   margin: 0 auto;
@@ -22,7 +25,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "playfair display";
+  font-family: "playfair display", serif;
 }
 
 h1 {
@@ -35,8 +38,6 @@ h3 {
 
 a {
   text-decoration: none;
-  color: var(--text);
-  font-family: "roboto mono";
 }
 
 .menu-container {
@@ -47,19 +48,19 @@ a {
   padding: 1em;
 }
 
-.menu a {
+.nav-menu a {
   text-decoration: none;
   color: var(--accent);
   padding-right: 1rem;
   font-size: 1.5rem;
 }
 
-.menu a:hover,
-.menu a.active {
-  color: var(--light);
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: var(--text);
 }
 
-.menu a.none {
+.nav-menu a.none {
   display: none;
 }
 
@@ -73,9 +74,8 @@ form {
   margin: 0 auto;
   padding: 4rem;
   border-radius: 0.5rem;
-  background: var(--accent);
+  background: var(--main);
   width: 350px;
-  color: var(--text);
 }
 
 input,
@@ -87,6 +87,7 @@ textarea {
 
 textarea {
   height: 100px;
+  resize: none;
 }
 
 form input,
@@ -105,8 +106,7 @@ form > div {
 }
 
 .book-container,
-.fav-container,
-.detail-container {
+.fav-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -129,12 +129,6 @@ form > div {
   width: 100%;
 }
 
-.message {
-  width: 100%;
-  padding: 1rem;
-  color: white;
-}
-
 i {
   font-size: 1.5rem;
 }
@@ -144,27 +138,24 @@ i:hover {
 }
 
 button {
+  font-family: "roboto mono", sans-serif;
   background: transparent;
   color: var(--text);
   border: 2px solid var(--text);
   border-radius: 1.3rem;
   cursor: pointer;
   padding: 0.7em 2em;
-  font-family: "roboto mono";
   font-size: 1rem;
   margin-bottom: 1rem;
 }
 
 button:hover {
-  border: 2px solid var(--text);
-  background: var(--text);
-  color: var(--accent);
+  border: 2px solid var(--accent);
+  background: var(--accent);
 }
 
 #logout {
   background: var(--main);
-  color: var(--light);
-  border: none;
 }
 
 #logout:hover {
@@ -181,9 +172,16 @@ button:hover {
   border: 2px solid var(--accent);
 }
 
+.message {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: var(--white);
+}
+
 .message.error {
-  border-color: maroon;
-  background: maroon;
+  border-color: var(--error);
+  background: var(--error);
 }
 
 .message.warning {

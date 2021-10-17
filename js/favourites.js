@@ -30,7 +30,7 @@ favourites.forEach((favourite) => {
 
   favContainer.innerHTML += `<div class="fav">
     <h3>${favourite.title}</h3>
-    <h4>${favourite.author}</h4>
+    <h4>By: ${favourite.author}</h4>
     <h4>${favourite.summary}</h4>
     <a href="book.html?id=${favourite.id}">
     <button>Read more</button>

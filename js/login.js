@@ -21,7 +21,7 @@ function submitForm(event) {
   const passwordValue = password.value.trim();
 
   if (usernameValue.length === 0 || passwordValue.length === 0) {
-    return displayMessage("warning", "Invalid values", ".message-container");
+    return displayMessage("warning", "Invalid login details", ".message-container");
   }
 
   doLogin(usernameValue, passwordValue);
