@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --warn: #4a2c40;
+  --accent: #d8f54e;
+  --text: #223322;
+  --main: #a3baec;
+  --success: #5daa68;
+}
+
+body {
+  height: 100vh;
+  font-family: "roboto mono";
+  background: white;
+  color: var(--text);
+  text-align: center;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "playfair display";
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+  font-family: "roboto mono";
+}
+
+.menu-container {
+  background-color: var(--main);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--accent);
+  padding-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.menu a:hover,
+.menu a.active {
+  color: var(--light);
+}
+
+.menu a.none {
+  display: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 4rem;
+  border-radius: 0.5rem;
+  background: var(--accent);
+  width: 350px;
+  color: var(--text);
+}
+
+input,
+textarea {
+  padding: 0.5em;
+  border: 2px solid var(--text);
+  border-radius: 0.5rem;
+}
+
+textarea {
+  height: 100px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+}
+
+form > div {
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.book-container,
+.fav-container,
+.detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book,
+.fav,
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: var(--main);
+  width: 300px;
+}
+
+.detail {
+  width: 100%;
+}
+
+.message {
+  width: 100%;
+  padding: 1rem;
+  color: white;
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+i:hover {
+  color: var(--accent);
+}
+
+button {
+  background: transparent;
+  color: var(--text);
+  border: 2px solid var(--text);
+  border-radius: 1.3rem;
+  cursor: pointer;
+  padding: 0.7em 2em;
+  font-family: "roboto mono";
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  border: 2px solid var(--text);
+  background: var(--text);
+  color: var(--accent);
+}
+
+#logout {
+  background: var(--main);
+  color: var(--light);
+  border: none;
+}
+
+#logout:hover {
+  background: var(--accent);
+}
+
+#login {
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+#login:hover {
+  background: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.message.error {
+  border-color: maroon;
+  background: maroon;
+}
+
+.message.warning {
+  border-color: var(--warn);
+  background: var(--warn);
+}
+
+.message.success {
+  border-color: var(--success);
+  background: var(--success);
+}
+
+.loader {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.loader::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 8px solid var(--accent);
+  border-color: var(--accent) transparent var(--accent) transparent;
+  animation: loader 0.8s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

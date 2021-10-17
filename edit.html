@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit book</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="icon" href="data:;base64,=" />
+  </head>
+  <body>
+    <div class="menu-container"></div>
+    <div class="container">
+      <h1>Edit Book</h1>
+      <form class="edit-form">
+        <div class="message-container"></div>
+        <div class="loader"></div>
+        <div>
+          <label for="title">Title</label>
+          <input id="title" />
+        </div>
+        <div>
+          <label for="author">Author</label>
+          <input id="author" />
+        </div>
+        <div>
+          <label for="summary">Summary</label>
+          <textarea id="summary"></textarea>
+        </div>
+        <input id="id" type="hidden" />
+        <div>
+          <button id="update">Update</button>
+        </div>
+        <div class="delete-container"></div>
+      </form>
+    </div>
+    <script src="js/edit.js" type="module"></script>
+  </body>
+</html>
